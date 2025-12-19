@@ -314,6 +314,9 @@ export async function saveChat(props: Props) {
             outLinkUid,
             metadata: metadataUpdate,
             updateTime: new Date()
+          },
+          $setOnInsert: {
+            createTime: new Date()
           }
         },
         {
